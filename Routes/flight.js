@@ -12,7 +12,8 @@ router.post('/',async (req,res)=>{
         time1:req.body.time1,
         time2:req.body.time2,
         stop:req.body.stop,
-        price:req.body.price
+        price:req.body.price,
+        url:req.body.url
     })
     try{
 

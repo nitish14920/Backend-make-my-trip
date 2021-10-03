@@ -1,38 +1,35 @@
 const mongoose = require("mongoose");
 
-const FlightSchema = mongoose.Schema(
+const AirportSchema = mongoose.Schema(
   {
-    logo: {
+    Airport: {
       type: String,
     },
-    title: {
-      type: String,
-      require: true,
-    },
-    time1: {
+    Country: {
       type: String,
       require: true,
     },
-    time2: {
+    Code: {
       type: String,
       require: true,
     },
-    stops: {
+    City: {
       type: String,
-      default: "non stop",
+      require: true,
     },
-    price: {
+    Longitude: {
+      type: Number,
+      default: 2546,
+    },
+    Latitude: {
       type: Number,
       default: 7452,
       require: true,
     },
-    url:{
-      type:String,
-    }
   },
   {
     versionKey: false,
   }
 );
 
-module.exports = mongoose.model("Flight", FlightSchema);
+module.exports = mongoose.model("Airport", AirportSchema);
